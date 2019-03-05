@@ -1,0 +1,87 @@
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>This is a Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./index.css">
+
+</head>
+
+<body>
+    <div id="colorBlock">
+
+    
+    </div>
+
+    <button onclick="changeColor()">Click me to change color</button>
+
+    <script>
+        const colors = ['blue', 'turquoise', 'green', 'gold', 'ceyenne', 'magenta', 'pink', 'gray', 'purple'];
+        const myElement = document.getElementById('colorBlock');
+
+        let index = 0;
+        const changeColor = () => {
+            myElement.style.background = colors[index]
+            if (index < colors.length) {
+                index += 1;
+            } else {
+                index = 0;
+            }
+            
+        };
+    </script>
+
+<div id = 'funWithWords'>
+        <h1>This font will change.</h1>
+  
+    </div>
+  
+    <button onclick="changeFont()">Click here to change the font</button>
+  
+    <script>
+        const fonts = ['Times New Roman', 'Georgia', 'Ariel', 'Verdana', 'Courier New', 'Lucida Console'];
+        const mySecondElement = document.getElementById('funWithWords');
+  
+        let secondIndex = 0;
+        const changeFont = () => {
+            mySecondElement.style.fontFamily = fonts[secondIndex]
+            if (secondIndex < fonts.length) {
+                secondIndex += 1;
+            } else {
+                secondIndex = 0
+            }
+        };
+
+        </script>
+
+    <div id = 'funWithWordsTwo'>
+        <h1>This font will change.</h1>
+
+    </div>
+
+    <button onclick="changeToItalic()">Click here to make italic</button>
+    <button onclick="changeToOblique()">Click here to make oblique</button>
+    <button onclick="changeToNormal()">Click here to make normal</button>
+
+    <script>
+        const myThirdElement = document.getElementById('funWithWordsTwo');
+        const changeToItalic = () => {
+            myThirdElement.style.fontStyle = 'italic'
+        };
+        const changeToOblique = () => {
+            myThirdElement.style.fontStyle = 'oblique'
+        };
+        const changeToNormal = () => {
+            myThirdElement.style.fontStyle = 'normal'
+        };
+        
+
+    
+    
+    </script>
+
+    
+</body>
+</html>
